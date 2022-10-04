@@ -2,8 +2,8 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY main.py ${LAMBDA_TASK_ROOT}
 COPY /app /app
+COPY main.py ${LAMBDA_TASK_ROOT}
 
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
