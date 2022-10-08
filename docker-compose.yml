@@ -5,7 +5,9 @@ services:
     container_name: "api"
     volumes:
       - ./app:/app
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.local
     ports:
       - 8080:8080
     tty: true
